@@ -36,8 +36,13 @@ cp video-40/config-darknet/* darknet
 
 ./darknet detector train obj.data yolo-obj.cfg darknet19_448.conv.23
 
+Modify the makefile with sed
 
-
+#!cat Makefile
+!sed -i 's/GPU=0/GPU=1/g' Makefile
+!sed -i 's/CUDNN=0/CUDNN=1/g' Makefile
+!sed -i 's/CUDNN_HALF=0/CUDNN_HALF=1/g' Makefile
+#!cat Makefile
 
 # How to Upload Results to Dropbox
 You'll need to follow the instructions to get an authentication key if you don't already have one.
