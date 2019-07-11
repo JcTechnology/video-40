@@ -28,21 +28,13 @@ conda install -c conda-forge scikit-image
 # Use with AlexeyAB Darknet
 
 git clone https://github.com/alexeyAB/darknet.git
-git clone https://github.com/nicolas42/video-40.git
+git clone https://github.com/JcTechnology/video-40.git
 wget https://pjreddie.com/media/files/darknet19_448.conv.23
 
 mv darknet19_448.conv.23 darknet
 cp video-40/config-darknet/* darknet
 
 ./darknet detector train obj.data yolo-obj.cfg darknet19_448.conv.23
-
-Modify the makefile with sed
-
-#!cat Makefile
-!sed -i 's/GPU=0/GPU=1/g' Makefile
-!sed -i 's/CUDNN=0/CUDNN=1/g' Makefile
-!sed -i 's/CUDNN_HALF=0/CUDNN_HALF=1/g' Makefile
-#!cat Makefile
 
 # How to Upload Results to Dropbox
 You'll need to follow the instructions to get an authentication key if you don't already have one.
@@ -60,4 +52,13 @@ chmod +x dropbox_uploader.sh
 # Ivan Goncharov's Colab Stuff
 https://github.com/ivangrov/YOLOv3-GoogleColab/blob/master/YOLOv3_GoogleColab.ipynb
 
+
+
+Modify the makefile with sed
+
+#!cat Makefile
+!sed -i 's/GPU=0/GPU=1/g' Makefile
+!sed -i 's/CUDNN=0/CUDNN=1/g' Makefile
+!sed -i 's/CUDNN_HALF=0/CUDNN_HALF=1/g' Makefile
+#!cat Makefile
 
