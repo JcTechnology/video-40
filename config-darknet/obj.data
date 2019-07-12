@@ -1,5 +1,0 @@
-classes= 1  
-train  = ../video-40/config-darknet/train.txt  
-valid  = ../video-40/config-darknet/test.txt  
-names = ../video-40/config-darknet/obj.names  
-backup = backup
