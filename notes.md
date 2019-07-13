@@ -27,7 +27,7 @@ conda install -c conda-forge scikit-image
 "
 
 
-# Use with AlexeyAB Darknet
+# To Use with AlexeyAB Darknet
 
 git clone https://github.com/alexeyAB/darknet.git
 git clone https://github.com/JcTechnology/video-40.git
